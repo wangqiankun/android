@@ -16,8 +16,17 @@
   <default revision="refs/heads/lineage-15.1"
            remote="github"
            sync-c="true"
-           sync-j="4" />
+           sync-j="14" />
 
+  <!--  add for wqk start -->
+
+  <remote fetch="https://github.com/" name="wqkgithub" revision="refs/heads/lineage-15.1" />
+
+  <remote  name="comjia"
+           revision="refs/heads/lineage-15.1"
+           fetch="ssh://git@git.comjia.com" />
+
+  <!--  add for wqk end -->
   <!-- AOSP Projects -->
 
   <project path="build/make" name="LineageOS/android_build" groups="pdk" >
@@ -334,7 +343,10 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" remote="aosp" />
   <project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
+   <!--  add for wqk start -->
+  <!-- <project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" /> -->
+  <project path="frameworks/base" name="wangqiankun/android_frameworks_base" remote="wqkgithub" />
+   <!--  add for wqk end -->
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" remote="aosp" />
@@ -361,7 +373,10 @@
   <project path="frameworks/opt/net/wifi" name="LineageOS/android_frameworks_opt_net_wifi" groups="pdk" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="frameworks/opt/telephony" name="LineageOS/android_frameworks_opt_telephony" groups="pdk" />
+   <!--  add for wqk start -->
+  <!--  <project path="frameworks/opt/telephony" name="LineageOS/android_frameworks_opt_telephony" groups="pdk" /> -->
+  <project path="frameworks/opt/telephony" name="wangqiankun/android_frameworks_opt_telephony" remote="wqkgithub" />
+   <!--  add for wqk end -->
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" remote="aosp" />
@@ -422,7 +437,10 @@
   <project path="packages/apps/HTMLViewer" name="LineageOS/android_packages_apps_HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="LineageOS/android_packages_apps_KeyChain" groups="pdk-fs" />
   <project path="packages/apps/ManagedProvisioning" name="LineageOS/android_packages_apps_ManagedProvisioning" groups="pdk-fs" />
-  <project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" groups="pdk-fs" />
+  <!--  add for wqk start -->
+  <!-- <project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" groups="pdk-fs" /> -->
+  <project path="packages/apps/Messaging" name="wangqiankun/android_packages_apps_Messaging" remote="wqkgithub"/>
+  <!--  add for wqk end -->
   <project path="packages/apps/Nfc" name="LineageOS/android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/PackageInstaller" name="LineageOS/android_packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" />
@@ -538,7 +556,10 @@
   <project path="system/nfc" name="LineageOS/android_system_nfc" groups="pdk" />
   <project path="system/nvram" name="platform/system/nvram" groups="pdk" remote="aosp" />
   <project path="system/security" name="LineageOS/android_system_security" groups="pdk" />
-  <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" />
+  <!--  add for wqk start -->
+  <!-- <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" /> -->
+  <project path="system/sepolicy" name="wangqiankun/android_system_sepolicy" remote="wqkgithub"/>
+  <!--  add for wqk end -->
   <project path="system/timezone" name="platform/system/timezone" groups="pdk" remote="aosp" />
   <project path="system/tools/aidl" name="LineageOS/android_system_tools_aidl" groups="pdk" />
   <project path="system/tools/hidl" name="LineageOS/android_system_tools_hidl" groups="pdk" />
